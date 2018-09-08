@@ -1,0 +1,207 @@
+<templateSet group="Adaptive Portal API Helpers">
+  <template name="WIZARD: Rule ONLY_SHOW_WHEN" value="{&#10;&#9;&quot;Type&quot;: &quot;ONLY_SHOW_WHEN&quot;,&#10;&#9;&quot;ShortCode&quot;: &quot;$SHORTCODE$&quot;,&#10;&#9;&quot;ComparisonType&quot;: &quot;$COMPARISON$&quot;,&#10;&#9;&quot;Value&quot;: &quot;$VALUE$&quot;&#10;}$END$" description="Workflow: Visibility rule" toReformat="true" toShortenFQNames="true">
+    <variable name="SHORTCODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COMPARISON" expression="enum(&quot;=&quot;,&quot;!=&quot;,&quot;&lt;&quot;,&quot;&gt;&quot;,&quot;In&quot;,&quot;Not in&quot;)" defaultValue="=" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: DataComponent Long" value="{&#10;&#9;&quot;ShortCode&quot;: &quot;$SHORTCODE$&quot;,&#10;&#9;&quot;DisplayTypeShortCode&quot;: &quot;$DISPLAYTYPE$&quot;,&#10;&#9;&quot;Label&quot;: &quot;$LABEL$&quot;,&#10;&#9;&quot;HelpDescription&quot;: &quot;$HELPDESCRIPTION$&quot;,&#10;&#9;&quot;Value&quot;: &quot;$VALUE$&quot;,&#10;&#9;&quot;MinimumValue&quot;: &quot;$MINVALUE$&quot;,&#10;&#9;&quot;MaximumValue&quot;: &quot;$MAXVALUE$&quot;,&#10;&#9;&quot;IsRequired&quot;: $REQUIRED$,&#10;&#9;&quot;IsReadOnly&quot;: false,&#10;&#9;&quot;ValidationMessage&quot;: &quot;$VALIDATIONMESSAGE$&quot;,&#10;&#9;&quot;ValidationRegularExpression&quot;: &quot;$VALIDATIONREGULAREXPRESSION$&quot;,&#10;&#9;&quot;AllowedValues&quot;: [],&#10;&#9;&quot;Settings&quot;: [],&#10;&#9;&quot;Rules&quot;: []&#10;},$END$" description="Workflow: Basic DataComponent" toReformat="true" toShortenFQNames="true">
+    <variable name="SHORTCODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DISPLAYTYPE" expression="enum(&quot;TEXTBOX&quot;, &quot;TEXTBLOCK&quot;, &quot;NUMBER&quot;, &quot;DATEPICKER&quot;, &quot;COMPOUND&quot;, &quot;DROPDOWN&quot;, &quot;RADIO&quot;, &quot;CHECKBOX&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HELPDESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MINVALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MAXVALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="REQUIRED" expression="enum(&quot;true&quot;, &quot;false&quot;)" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <variable name="VALIDATIONMESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALIDATIONREGULAREXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: Allowed Value" value="{ &quot;Id&quot;: &quot;$ID$&quot;, &quot;Text&quot;: &quot;$ID$&quot; }$END$" description="Workflow: An item for allowed values" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: Setting for a data component" value="{ &quot;Id&quot;: &quot;$ID$&quot;, &quot;Text&quot;: &quot;$TEXT$&quot; }$END$" description="Workflow: An item for settings values" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="enum(&quot;IS_BUTTON_BAR&quot;,&quot;DATA_COMPONENTS&quot;,&quot;OPTIONS_CAPTION&quot;,&quot;ALIGN_WITH_FIELDS&quot;,&quot;HIDE_SELECT_ALL&quot;,&quot;FORCE_UPPERCASE&quot;, &quot;DECIMAL_PLACES&quot;, &quot;CURRENCY_SYMBOL&quot;, &quot;SUFFIX&quot;, &quot;IS_SLIDER_INPUT&quot;,&quot;RENDER_AS_MOBILE&quot;,&quot;COMPOUND_TYPE&quot;,&quot;COMPOUND_FORM&quot;,&quot;BLACK_LIST&quot;,&quot;WHITE_LIST&quot;,&quot;MAX_LENGTH&quot;,&quot;RESTRICT_MAX_LENGTH&quot;,&quot;NO_CONFIRM&quot;,&quot;TURN_OFF_STRENGTH_CHECK&quot;,&quot;FREE_TEXT&quot;,&quot;DO_NOT_RENDER_OPTIONS_AS_BUTTONS&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="enum(&quot;true&quot;,&quot;false&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="PORTAL: App - Config" value="{ &quot;code&quot;: &quot;$ID$&quot;, &quot;value&quot;: &quot;$TEXT$&quot; }$END$" description="Portal: An item for an App Config" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="enum(&quot;DISPLAY_AS&quot;, &quot;LEVEL2_DISPLAY_AS&quot;, &quot;SERVICE_URL&quot;, &quot;LEVEL2_SERVICE_URL&quot;, &quot;LEVEL3_SERVICE_URL&quot;, &quot;CLICK_THRU_URL&quot;, &quot;CLICK_THRU_LABEL&quot;, &quot;KEY_STAT_NAME&quot;, &quot;GOOD_STAT_NAME&quot;, &quot;MEDIUM_STAT_NAME&quot;, &quot;BAD_STAT_NAME&quot;, &quot;SUFFIX&quot;, &quot;CURRENCY_SYMBOL&quot;, &quot;DECIMAL_PLACES&quot;, &quot;MONEY_ROUNDING_THRESHOLD&quot;, &quot;ROUNDED_DECIMAL_PLACES&quot;, &quot;TOOLTIP_DECIMAL_PLACES&quot;, &quot;ROUNDING_THOUSANDS&quot;, &quot;ROUNDING_MILLIONS&quot;, &quot;ROUNDING_BILLIONS&quot;, &quot;CHART_OPTIONS&quot;, &quot;DIAL_OPTIONS&quot;, &quot;SHOW_LEVEL2_ALL_LINK&quot;, &quot;NO_LEVEL2_FILTER&quot;, &quot;MOCK_LEVEL1_SERVICE&quot;, &quot;MOCK_LEVEL2_SERVICE&quot;, &quot;SHOW_NAME&quot;, &quot;L2_SHOW_NAME&quot;, &quot;L1_ONCLICK&quot;, &quot;L1_ONCLICK_URL&quot;, &quot;L1_ONCLICK_URL_TARGET&quot;, &quot;L2_ONCLICK&quot;, &quot;L2_ONCLICK_URL&quot;, &quot;L2_ONCLICK_URL_TARGET&quot;, &quot;L1_HTML&quot;, &quot;L1_HTML_SOURCE&quot;, &quot;L2_HTML&quot;, &quot;L2_HTML_SOURCE&quot;, &quot;L1_BG_COLOR&quot;, &quot;L1_BG_POS&quot;, &quot;L1_BG_SIZE&quot;, &quot;L1_BG_IMAGE&quot;, &quot;L2_BG_COLOR&quot;, &quot;L2_BG_POS&quot;, &quot;L2_BG_SIZE&quot;, &quot;L2_BG_IMAGE&quot;, &quot;L1_HTML&quot;, &quot;MIN_SEARCH_TERM_LENGTH&quot;, &quot;LEVEL2_SERVICE_URL&quot;, &quot;WIZARD_FORM_COMPONENTS&quot;, &quot;FEED_URL&quot;, &quot;FEED_DELAY&quot;, &quot;FEED_NUM&quot;, &quot;USE_TITLE_FROM_FEED&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: DataComponent Short" value="{&#10;&#9;&quot;ShortCode&quot;: &quot;$SHORTCODE$&quot;,&#10;&#9;&quot;DisplayTypeShortCode&quot;: &quot;$DISPLAYTYPE$&quot;,&#10;&#9;&quot;Label&quot;: &quot;$LABEL$&quot;,&#10;&#9;&quot;HelpDescription&quot;: &quot;$HELPDESCRIPTION$&quot;,&#10;&#9;&quot;IsRequired&quot;: $REQUIRED$,&#10;&#9;&quot;Settings&quot;: []&#10;},$END$" description="Workflow: Basic DataComponent" toReformat="true" toShortenFQNames="true">
+    <variable name="SHORTCODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DISPLAYTYPE" expression="enum(&quot;TEXTBOX&quot;, &quot;TEXTBLOCK&quot;, &quot;NUMBER&quot;, &quot;DATEPICKER&quot;, &quot;COMPOUND&quot;, &quot;DROPDOWN&quot;, &quot;RADIO&quot;, &quot;CHECKBOX&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HELPDESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="REQUIRED" expression="enum(&quot;true&quot;, &quot;false&quot;)" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: Rule WHEN_VALUE_THEN_SET" value="{&#10;&#9;&quot;Type&quot;: &quot;WHEN_VALUE_THEN_SET&quot;,&#10;&#9;&quot;ComparisonType&quot;: &quot;$COMPARISON$&quot;,&#10;&#9;&quot;Value&quot;: &quot;$VALUE$&quot;,&#10;&#9;&quot;Then&quot;: [ &#10;&#9;&#9;$END$&#10;&#9;]&#10;}" description="Workflow: Advanced rule" toReformat="true" toShortenFQNames="true">
+    <variable name="COMPARISON" expression="enum(&quot;=&quot;,&quot;!=&quot;,&quot;&lt;&quot;,&quot;&gt;&quot;,&quot;In&quot;,&quot;Not in&quot;)" defaultValue="=" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: Rule THEN" value="{&#10;&#9;&quot;Target&quot;: &quot;$SHORTCODE$&quot;,&#10;&#9;&quot;Property&quot;: &quot;$PROPERTY$&quot;,&#10;&#9;&quot;NewValue&quot;: &quot;$NEWVALUE$&quot;&#10;}$END$&#10;" description="Then component of an advanced rule" toReformat="false" toShortenFQNames="true">
+    <variable name="SHORTCODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPERTY" expression="enum(&quot;AllowedValues&quot;,&quot;AllowedValues_disableTheseIds&quot;,&quot;AllowedValues_onlyShowTheseIds&quot;,&quot;AllowedValues_removeTheseIds&quot;,&quot;CssClass&quot;,&quot;HelpDescription&quot;,&quot;IsDisabled&quot;,&quot;IsFullWidth&quot;,&quot;IsReadOnly&quot;,&quot;IsRequired&quot;,&quot;Label&quot;,&quot;Value&quot;,&quot;MaximumValue&quot;,&quot;MinimumValue&quot;,&quot;RenderAsMobile&quot;,&quot;Rules&quot;,&quot;Setting&quot;,&quot;Styles&quot;,&quot;ValidationRegularExpression&quot;,&quot;ValidationMessage&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="NEWVALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="PORTAL: App - STATS: Level1 Statistic" value="{&#10;&#9;&quot;StatisticName&quot;: &quot;$NAME$&quot;,&#10;&#9;&quot;StatisticValue&quot;: &quot;$VALUE$&quot;&#10;}$END$&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="PORTAL: App - BASIC" value="{&#10;&#9;&quot;type&quot;:&quot;$TYPE$&quot;,&#10;&#9;&quot;name&quot;:&quot;$NAME$&quot;,&#10;&#9;&quot;description&quot;:&quot;$DESCRIPTION$&quot;,&#10;&#9;&quot;config&quot;: []&#10;}$END$" description="Basic Portal App" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="enum(&quot;STATS&quot;,&quot;CMS&quot;,&quot;FEED&quot;,&quot;SEARCH&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="DATAGRID: BASIC no options" value="{&#10;&#9;&quot;columns&quot;: [$END$],&#10;&#9;&quot;data&quot;: []&#10;}" description="basic skeleton of a datagrid" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="DATAGRID: FULL - all options" value="{&#10;&#9;&quot;defaultSort&quot;: &quot;$DEFAULT_SORT$&quot;,&#10;&#9;&quot;title&quot;: &quot;$TITLE$&quot;,&#10;&#9;&quot;defaultSortIsAscending&quot;: true,&#10;&#9;&quot;allDataProvided&quot;: false,&#10;&#9;&quot;hasSearch&quot;: true,&#10;&#9;&quot;hasPaging&quot;: true,&#10;&#9;&quot;pageSize&quot;: 25,&#10;&#9;&quot;fixedHeight&quot;: 365,&#10;&#9;&quot;totalRecords&quot;: 0,&#10;&#9;&quot;onlySearchIn&quot;: &quot;$ONLY_SEARCH_IN$&quot;,&#10;&#9;&quot;columns&quot;: [$END$],&#10;&#9;&quot;data&quot;: []&#10;}" description="Full skeleton for a datagrid" toReformat="false" toShortenFQNames="true">
+    <variable name="DEFAULT_SORT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ONLY_SEARCH_IN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="DATAGRID: Column basic" value="{&#10;&#9;&quot;label&quot;:&quot;$LABEL$&quot;,&#10;&#9;&quot;field&quot;:&quot;$FIELD$&quot;,&#10;&#9;&quot;type&quot;:&quot;$TYPE$&quot;&#10;}$END$" description="a datagrid column" toReformat="false" toShortenFQNames="true">
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="enum(&quot;TEXT&quot;,&quot;MONEY&quot;,&quot;NUMBER&quot;,&quot;DATE&quot;,&quot;HTML&quot;)" defaultValue="&quot;TEXT&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="DATAGRID: Column - moneyOptions" value="&quot;moneyOptions&quot;: {&#10;&#9;&quot;decimalPlaces&quot;: $DP$,&#10;&#9;&quot;currency&quot;: &quot;$CURRENCY$&quot;,&#10;&#9;&quot;suffix&quot;: &quot;$SUFFIX$&quot;&#10;}$END$" description="money or numerical options for a grid" toReformat="false" toShortenFQNames="true">
+    <variable name="DP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CURRENCY" expression="enum(&quot;&quot;,&quot;£&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="SUFFIX" expression="enum(&quot;&quot;,&quot;%&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="DATAGRID: Column - dateOptions" value="&quot;dateOptions&quot;: {&#10;&#9;&quot;nullDate&quot;: &quot;$NULLDATE$&quot;,&#10;&#9;&quot;showTime&quot;: false,&#10;&#9;&quot;noDay&quot;: false,&#10;&#9;&quot;shortMonth&quot;: false,&#10;&#9;&quot;hideYear&quot;: false,&#10;&#9;&quot;todayLabel&quot;: &quot;Today&quot;,&#10;&#9;&quot;yesterdayLabel&quot;: &quot;Yesterday&quot;,&#10;&#9;&quot;tomorrowLabel&quot;: &quot;Tomorrow&quot;&#10;}$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NULLDATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="DATAGRID: Column -  options" value="&quot;options&quot;:{&#10;&#9;&quot;toolTip&quot;: &quot;$TOOLTIP$&quot;,&#10;&#9;&quot;width&quot;: $WIDTH$,&#10;&#9;&quot;hideWhenScreenLessThan&quot;: $HIDE_WHEN_SCREEN_LESS_THAN$,&#10;&#9;&quot;template&quot;: &quot;$TEMPLATE$&quot;,&#10;&#9;&quot;footerTemplate&quot;: &quot;$FOOTER_TEMPLATE$&quot;,&#10;&#9;&quot;rightAlgined&quot;: $RIGHT_ALIGNED$,&#10;&#9;&quot;sortable&quot;: $SORTABLE$&#10;}$END$&#10;" description="datagrid column options" toReformat="false" toShortenFQNames="true">
+    <variable name="TOOLTIP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="WIDTH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HIDE_WHEN_SCREEN_LESS_THAN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEMPLATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FOOTER_TEMPLATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RIGHT_ALIGNED" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SORTABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="DATAGRID: Column partial" value="{&#10;&#9;&quot;label&quot;:&quot;$LABEL$&quot;,&#10;&#9;&quot;field&quot;:&quot;$FIELD$&quot;,&#10;&#9;&quot;type&quot;:&quot;$TYPE$&quot;,&#10;&#9;&quot;options&quot;: {&#10;&#9;&#9;&quot;width&quot;: $WIDTH$,&#10;&#9;&#9;&quot;hideWhenScreenLessThan&quot;: $HIDE$&#10;&#9;}&#10;}$END$" description="a datagrid column" toReformat="false" toShortenFQNames="true">
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="enum(&quot;TEXT&quot;,&quot;MONEY&quot;,&quot;NUMBER&quot;,&quot;DATE&quot;,&quot;HTML&quot;)" defaultValue="&quot;TEXT&quot;" alwaysStopAt="true" />
+    <variable name="WIDTH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HIDE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: Form" value="{&#10;&#9;&quot;ScreenName&quot;: &quot;$NAME$&quot;,&#10;&#9;&quot;ScreenHelpDescription&quot;: &quot;$DESCRIPTION$&quot;,&#10;&#9;&quot;ShowBackButton&quot;: false,&#10;&#9;&quot;BackButtonLabel&quot;: &quot;Back&quot;,&#10;&#9;&quot;ShowUndoButton&quot;: false,&#10;&#9;&quot;UndoButtonLabel&quot;: &quot;Undo&quot;,&#10;&#9;&quot;ShowSaveButton&quot;: false,&#10;&#9;&quot;SaveButtonLabel&quot;: &quot;Save&quot;,&#10;&#9;&quot;ShowNextButton&quot;: true,&#10;&#9;&quot;NextButtonLabel&quot;: &quot;Next&quot;,&#10;&#9;&quot;CSSClass&quot;: &quot;single-panel&quot;,&#10;&#9;&quot;CSSFlags&quot;: &quot;show-hidden-fields&quot;,&#10;&#9;&quot;InLineNavigationButtons&quot;: true,&#10;&#9;&quot;hasCSSColumns&quot;: false,&#10;&#9;&quot;ActionButtons&quot;: [],&#10;&#9;&quot;DataComponents&quot;: [&#10;&#9;&#9;$END$&#10;&#9;&#9;&#10;&#9;&#9;&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&quot;ShortCode&quot;: &quot;DELETE_ME&quot;,&#10;&#9;&#9;&#9;&quot;DisplayTypeShortCode&quot;: &quot;TEXTBLOCK&quot;,&#10;&#9;&#9;&#9;&quot;Label&quot;: &quot;&amp;nbsp;&quot;,&#10;&#9;&#9;&#9;&quot;xLabel&quot;: &quot;This is just a temporary element at the bottom which makes putting commas in a bit easier&quot;&#10;&#9;&#9;}&#9;&#9;&#10;&#9;]&#10;}" description="Basic skeleton for a wizard form" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: Action Button" value="{&#10;&#9;&quot;Label&quot;: &quot;$LABEL$&quot;,&#10;&#9;&quot;Action&quot;: &quot;$ACTION$&quot;,&#10;&#9;&quot;ConfirmMessage&quot;: &quot;Are you sure you want to $LABEL$ this $type$?&quot;,&#10;&#9;&quot;CompleteMessage&quot;: &quot;$type$ $LABEL$d&quot;,&#10;&#9;&quot;ConfirmYesButtonLabel&quot;: &quot;Yes&quot;,&#10;&#9;&quot;ConfirmNoButtonLabel&quot;: &quot;No&quot;&#10;}" description="Create an action button for a wizard form/screen" toReformat="false" toShortenFQNames="true">
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION" expression="capitalize($LABEL$)" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="HTML: href = ShowModalDialog (Wizard)" value=" href=&quot;javascript:window.DK.functions.showModalDialog('~Assets/api/$WIZARD_FORM$', {&#10;&#9;type: 'WIZARD_FORM',&#10;&#9;destinationUrl: '~Assets/api/Demos/common/MockWizardResponse.json',&#10;&#9;title: '$TITLE$',&#10;&#9;takeOver: true,&#10;&#9;backName: 'Back to Dashboard'})&quot;$END$" description="Adds a href to an &lt;a&gt; to show a modal dialog" toReformat="false" toShortenFQNames="true">
+    <variable name="WIZARD_FORM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="PORTAL: App - Layouts" value="{&#10;&#9;&quot;dashboard&quot;: &quot;$DASHBOARD$&quot;,&#10;&#9;&quot;positions&quot;: [&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&quot;width&quot;: &quot;12&quot;,&#10;&#9;&#9;&#9;&quot;height&quot;: &quot;3&quot;,&#10;&#9;&#9;&#9;&quot;x&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;y&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;name&quot;: &quot;PHONE&quot;,&#10;&#9;&#9;&#9;&quot;maxWidth&quot;: &quot;700&quot;&#10;&#9;&#9;},&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&quot;width&quot;: &quot;10&quot;,&#10;&#9;&#9;&#9;&quot;height&quot;: &quot;2&quot;,&#10;&#9;&#9;&#9;&quot;x&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;y&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;name&quot;: &quot;TABLET&quot;,&#10;&#9;&#9;&#9;&quot;minWidth&quot;: null,&#10;&#9;&#9;&#9;&quot;maxWidth&quot;: &quot;1000&quot;&#10;&#9;&#9;},&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&quot;width&quot;: &quot;8&quot;,&#10;&#9;&#9;&#9;&quot;height&quot;: &quot;4&quot;,&#10;&#9;&#9;&#9;&quot;x&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;y&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;name&quot;: &quot;DEFAULT&quot;,&#10;&#9;&#9;&#9;&quot;minWidth&quot;: null,&#10;&#9;&#9;&#9;&quot;maxWidth&quot;: null&#10;&#9;&#9;},&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&quot;width&quot;: &quot;3&quot;,&#10;&#9;&#9;&#9;&quot;height&quot;: &quot;3&quot;,&#10;&#9;&#9;&#9;&quot;x&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;y&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;name&quot;: &quot;HD_720P&quot;,&#10;&#9;&#9;&#9;&quot;minWidth&quot;: 1400&#10;&#9;&#9;},&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&quot;width&quot;: &quot;2&quot;,&#10;&#9;&#9;&#9;&quot;height&quot;: &quot;3&quot;,&#10;&#9;&#9;&#9;&quot;x&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;y&quot;: &quot;0&quot;,&#10;&#9;&#9;&#9;&quot;name&quot;: &quot;HD_1080P&quot;,&#10;&#9;&#9;&#9;&quot;minWidth&quot;: 2000&#10;&#9;&#9;}&#10;&#9;]&#10;}" description="basic layout for an App" toReformat="false" toShortenFQNames="true">
+    <variable name="DASHBOARD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+    </context>
+  </template>
+  <template name="alert error" value="&lt;div class=&quot;alert alert-error&quot;&gt;&#10;&#9;&lt;span class=&quot;icon icon-notification&quot;&gt;&lt;/span&gt;&#10;&#9;&lt;header&gt;Error!&lt;/header&gt;&#10;&#10;&#9;$END$&#10;&lt;/div&gt;" description="an error alert" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="alert warning" value="&lt;div class=&quot;alert alert-warning&quot;&gt;&#10;&#9;&lt;span class=&quot;icon icon-warning&quot;&gt;&lt;/span&gt;&#10;&#9;&lt;header&gt;Warning!&lt;/header&gt;&#10;&#10;&#9;$END$&#10;&lt;/div&gt;" description="a warning alert" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="alert success" value="&lt;div class=&quot;alert alert-success&quot;&gt;&#10;&#9;&lt;span class=&quot;icon icon-checkmark&quot;&gt;&lt;/span&gt;&#10;&#9;&lt;header&gt;Success!&lt;/header&gt;&#10;&#10;&#9;$END$&#10;&lt;/div&gt;" description="a success alert" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="alert info" value="&lt;div class=&quot;alert alert-info&quot;&gt;&#10;&#9;&lt;span class=&quot;icon icon-question&quot;&gt;&lt;/span&gt;&#10;&#9;&lt;header&gt;Info&lt;/header&gt;&#10;&#10;&#9;$END$&#10;&lt;/div&gt;" description="an info alert" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="WIZARD: text resources" value="{resources.custom.$END$}" description="custom text resource reference" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

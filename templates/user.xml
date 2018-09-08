@@ -1,0 +1,323 @@
+<templateSet group="CoffeeScript helpers">
+  <template name="aaa" value="# Arrange$END$&#10;&#10;# Act&#10;&#10;# Assert&#10;" description="Arrange Act Assert" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="major section - empty" value="###########################################################&#10;#&#10;# $NAME$&#10;#&#10;###########################################################&#10;$END$" description="Insert a major section break" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="TODO" value="#TODO: $TASK$ $END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TASK" expression="" defaultValue="Unit test this" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="add a spec" value="'cs!../test/specs/$PASTE_HERE$.spec'," description="add a spec" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="PASTE_HERE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="describe 'construction'" value="describe 'construction', -&gt;&#10;&#9;it 'then be defined, and extend `$BASE_CLASS$`', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest).toBeDefined()&#10;&#9;&#9;expect(classUnderTest).toBeInstanceOf($BASE_CLASS$)&#10;&#9;&#9;expect(classUnderTest).toBeInstanceOf($CURRENT_CLASS$)&#10;&#9;&#9;expect(classUnderTest.constructor.name).toBe('$CURRENT_CLASS$')$END$&#10;" description="jasmine spec for construction" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="BASE_CLASS" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CURRENT_CLASS" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'public methods'" value="describe 'public methods', -&gt;&#10;&#9;it 'then expose a `$METHOD_NAME$()` method', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.$METHOD_NAME$).toBeDefined()&#10;&#9;&#10;&#9;$END$&#10;" description="jasmine spec for public api" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'bindings'" value="describe 'bindings', -&gt;&#10;&#9;it 'then expose a `$METHOD_NAME$()` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.$METHOD_NAME$).toBeDefined()&#10;&#9;&#10;&#9;$END$&#10;" description="jasmine spec for knockout bindings" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'advanced bindings' changes" value="describe 'advanced bindings', -&gt;&#10;&#9;describe 'when `$property$` changes', -&gt;&#10;&#9;&#9;it 'then $somethigns$', -&gt;&#10;&#9;&#9;&#9;$END$&#10;" description="jasmine spec for advanced bindings" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="property" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="somethigns" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'classUnderTest'" value="describe '$FULL_PATH$', -&gt;&#10;&#9;classUnderTest = null&#10;&#9;&#10;&#9;beforeEach -&gt;&#10;&#9;&#9;# mocks and test spies&#10;&#9;&#9;&#10;&#9;&#9;&#10;&#9;&#9;# class under test&#10;&#9;&#9;classUnderTest = new $CLASS$()&#10;&#9;&#9;window.classUnderTest = classUnderTest&#10;&#9;&#9;&#10;&#9;&#9;&#10;&#9;&#9;# injections&#10;&#9;&#9;&#10;&#9;&#9;&#10;&#9;&#10;&#9;$END$&#10;" description="main jasmine spec" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="FULL_PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="singleton" value="##############################&#10;# singleton&#10;##############################&#10;&#10;_instance = undefined&#10;&#10;@getInstance: (args) -&gt;&#10;&#9;_instance ?= new $CURRENT_CLASS$(args)&#10;&#10;##############################&#10;# class&#10;##############################&#10;&#10;$END$" description="turns the current class into a singleton" toReformat="false" toShortenFQNames="true">
+    <variable name="CURRENT_CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="it 'singleton" value="it 'should expose a `singleton`', -&gt;&#10;&#9;# Assert&#10;&#9;expect($CLASS$.getInstance()).toBeDefined()&#10;&#9;expect($CLASS$.getInstance()).toBeInstanceOf($CLASS$)$END$" description="should expose a singleton" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="logger" value="logger = require('cs!logger')$END$" description="inject the logger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="jasmineSignals" value="jasmineSignals = require('jasmineSignals')$END$" description="inject jasmine signals" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="major section - imported dependencies" value="###########################################################&#10;#&#10;# Imported dependencies&#10;#&#10;###########################################################&#10;$END$" description="Insert a major section break" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'execute'" value="describe 'when invoking `execute()`', -&gt;&#10;&#9;beforeEach -&gt;&#10;&#9;&#9;classUnderTest.execute()&#10;&#9;&#9;&#10;&#9;it 'then $SPEC$', -&gt;&#10;&#9;&#9;$END$&#10;" description="jasmine spec for command" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="SPEC" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'public constants'" value="describe 'constants', -&gt;&#10;&#9;it 'then expose `$NAME$` with the value `$VALUE$`', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.$NAME$).toBeDefined()&#10;&#9;&#9;expect(classUnderTest.$NAME$).toBe('$VALUE$')&#10;&#9;&#10;&#9;$END$&#10;" description="jasmine spec for constants" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="minor section break" value="######################################&#10;# $section$&#10;######################################$END$" description="Insert a minor section break" toReformat="false" toShortenFQNames="true">
+    <variable name="section" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'when invoking" value="describe 'when invoking `$METHOD_NAME$()', -&gt;&#10;&#9;it 'then $description$', -&gt;&#10;&#9;&#9;$END$&#10;" description="jasmine spec for invoking a method" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'signal handling'" value="describe 'signal handling', -&gt;&#10;&#9;describe 'when `$SIGNAL$` is dispatched', -&gt;&#10;&#9;&#9;beforeEach -&gt;&#10;&#9;&#9;&#9;$SIGNAL$.dispatch()&#10;&#9;&#9;&#9;&#10;&#9;&#9;it 'then $DO_SOMETHING$', -&gt;&#10;&#9;&#9;&#9;# Assert&#10;&#9;&#9;&#9;$END$" description="jasmine spec for signal handling" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SIGNAL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="require current" value="$Class$ = require('cs!apps/aegon/dataComponents/SRI/BCE/$Path$/$Class$')$END$" description="inject dependency from the current project" toReformat="false" toShortenFQNames="true">
+    <variable name="Class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Path" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="it 'property'" value="it 'should expose a `$PROPERTY$` property', -&gt;&#10;&#9;# Assert&#10;&#9;expect(classUnderTest.$PROPERTY$).toBeDefined()" description="should expose a property" toReformat="false" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="Signal" value="Signal = require('signals')$END$" description="require signals lib" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="knockout" value="knockout = require('knockout')$END$" description="inject knockout" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="jquery" value="jquery = require('jquery')$END$" description="inject jquery" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="arrange" value="# Arrange$END$&#10;" description="Arrange" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="act" value="# Act$END$" description="Act" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="console.log" value="console.log &quot;$THING_TO_LOG$=#{$THING_TO_LOG$}&quot;$END$" description="logs the thing in the clipboard" toReformat="false" toShortenFQNames="true">
+    <variable name="THING_TO_LOG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="injector" value="injector = require('cs!apps/common/spas/WizardBuilder/core/injector')$END$" description="inject the injector" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="assert" value="# Assert$END$&#10;" description="Assert" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="BaseCommand" value="BaseCommand = require('cs!common/commandPattern/BaseCommand')" description="require baseCommand" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="major section break (LESS/JS)" value="///////////////////////////////////////////////////////////&#10;//&#10;// $SECTION$&#10;//&#10;///////////////////////////////////////////////////////////&#10;" description="major section break (LESS)" toReformat="false" toShortenFQNames="true">
+    <variable name="SECTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="BaseCommandQueue" value="BaseCommandQueue = require('cs!common/commandPattern/BaseCommandQueue')" description="require BaseCommandQueue" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="BaseAsyncCommand" value="BaseAsyncCommand = require('cs!common/commandPattern/BaseAsyncCommand')" description="require BaseAsyncCommand" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'public api'" value="describe 'public api', -&gt;&#10;&#9;describe 'bindings', -&gt;&#10;&#9;&#9;it 'then expose a `$BINDING$` binding', -&gt;&#10;&#9;&#9;&#9;# Assert&#10;&#9;&#9;&#9;expect(classUnderTest.$BINDING$).toBeDefined()&#10;&#10;&#9;describe 'advanced bindings', -&gt;&#10;&#9;&#9;it 'then expose a `$COMPUTED$` computed binding', -&gt;&#10;&#9;&#9;&#9;# Assert&#10;&#9;&#9;&#9;expect(classUnderTest.$COMPUTED$).toBeDefined()&#10;&#10;&#9;describe 'methods', -&gt;&#10;&#9;&#9;it 'then expose a `$METHOD_NAME$()` method', -&gt;&#10;&#9;&#9;&#9;# Assert&#10;&#9;&#9;&#9;expect(classUnderTest.$METHOD_NAME$).toBeDefined()&#10;&#9;&#9;&#10;&#9;$END$&#10;" description="jasmine spec for public api" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="BINDING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COMPUTED" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="major section - unit test for" value="###########################################################&#10;#&#10;# Unit test for: $CLASS_DESCRIPTION$&#10;# &#10;###########################################################&#10;$END$" description="Major section break at the top of a Unit test with a class summary" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="jasmineJQuery" value="jasmineJQuery = require('jasmineJQuery')$END$" description="inject jasmineJQuery" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="minor section break (LESS/JS)" value="///////////////////////////////&#10;// $SECTION$&#10;///////////////////////////////&#10;" description="minor section break (LESS)" toReformat="false" toShortenFQNames="true">
+    <variable name="SECTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="BaseLoadEntityCommand" value="BaseLoadEntityCommand = require(&quot;cs!common/commandPattern/entity/BaseLoadEntityCommand&quot;)$END$&#10;" description="require BaseLoadEntityCommand" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="BaseDataService" value="BaseDataService = require('cs!BaseDataService')$END$&#10;" description="require BaseDataService" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="BaseRouter" value="BaseRouter = require('cs!common/routing/BaseRouter')$END$&#10;" description="require BaseRouter" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="BaseViewModel" value="BaseViewModel = require('cs!BaseViewModel')$END$" description="require BaseViewModel" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="FIXME ES" value="# FIXME: $TASK$ &#10;#&#10;#&#9;   Author:   ES&#10;#      Reviewer: GJ&#10;#&#9;   Date:     2013-11-20 $END$" description="insert a FIXME for Code Review" toReformat="false" toShortenFQNames="true">
+    <variable name="TASK" expression="" defaultValue="Unit test this" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="FIXME" value="&lt;!-- FIXME Author:   ES: $TASK$&#10;     Reviewer: GJ&#10;&#9; Date:     2013-11-20 --&gt; $END$ " description="insert a FIXME for Code Review" toReformat="false" toShortenFQNames="true">
+    <variable name="TASK" expression="" defaultValue="Unit test this" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="describe 'advanced bindings' returning" value="describe 'advanced bindings', -&gt;&#10;&#9;describe 'when returning `$property$`', -&gt;&#10;&#9;&#9;describe 'and `$something$` is &quot;$whatever$&quot;', -&gt;&#10;&#9;&#9;&#9;it 'then return `$value$`', -&gt;&#10;&#9;&#9;&#9;&#9;# Arrange&#10;&#9;&#9;&#9;&#9;classUnderTest.$something$($whatever$)&#10;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;# Assert&#10;&#9;&#9;&#9;&#9;expect(classUnderTest.$property$()).toBe($value$)&#10;&#9;&#9;&#9;&#10;&#9;&#9;describe 'and `$something$` is &quot;$whateverelse$&quot;', -&gt;&#10;&#9;&#9;&#9;it 'then return `$otherValue$`', -&gt;&#10;&#9;&#9;&#9;&#9;# Arrange&#10;&#9;&#9;&#9;&#9;classUnderTest.$something$($whateverelse$)&#10;&#10;&#9;&#9;&#9;&#9;# Assert&#10;&#9;&#9;&#9;&#9;expect(classUnderTest.$property$()).toBe($otherValue$)&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;$END$&#10;" description="jasmine spec for advanced bindings" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="property" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="something" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="whatever" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="whateverelse" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="otherValue" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="minor section break (html)" value="&lt;!-- ///////////////////////////////&#10;$SECTION$&#10;/////////////////////////////// --&gt;&#10;" description="minor section break (html)" toReformat="false" toShortenFQNames="true">
+    <variable name="SECTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="major section break (html)" value="&lt;!-- /////////////////////////////////////////////////////////////////&#10;&#10;$SECTION$&#10;&#10;///////////////////////////////////////////////////////////////// --&gt;" description="major section break (html)" toReformat="false" toShortenFQNames="true">
+    <variable name="SECTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="BaseStatefulViewModel" value="BaseStatefulViewModel = require('cs!BaseStatefulViewModel')$END$&#10;" description="require BaseStatefulViewModel" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="describe 'data bindings'" value="describe 'data bindings', -&gt;&#10;&#9;it 'then expose a `data().$BINDING01$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING01$).toBeDefined()&#10;&#10;&#9;it 'then expose a `data().$BINDING02$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING02$).toBeDefined()&#10;&#10;&#9;it 'then expose a `data().$BINDING03$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING03$).toBeDefined()&#10;&#10;&#9;it 'then expose a `data().$BINDING04$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING04$).toBeDefined()&#10;&#10;&#9;it 'then expose a `data().$BINDING05$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING05$).toBeDefined()&#10;&#10;&#9;it 'then expose a `data().$BINDING06$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING06$).toBeDefined()&#10;&#9;&#10;&#9;it 'then expose a `data().$BINDING07$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING07$).toBeDefined()&#10;&#9;&#10;&#9;it 'then expose a `data().$BINDING08$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING08$).toBeDefined()&#10;&#9;&#10;&#9;it 'then expose a `data().$BINDING09$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING09$).toBeDefined()&#10;&#9;&#10;&#9;it 'then expose a `data().$BINDING10$` binding', -&gt;&#10;&#9;&#9;# Assert&#10;&#9;&#9;expect(classUnderTest.data().$BINDING10$).toBeDefined()&#10;&#9;&#10;&#9;$END$&#10;" description="jasmine spec for data bindings (for models)" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="BINDING10" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING09" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING08" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING07" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING06" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING05" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING04" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING03" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING02" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BINDING01" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="it 'binding'" value="it 'then expose a `$Name$()` binding', -&gt;&#10;&#9;# Assert&#10;&#9;expect(classUnderTest.$Name$).toBeDefined()&#10;&#9;$END$&#10;" description="and a binding spec" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="position:" value="position: $positon$;&#10;left: $px$;&#10;right: $px$;&#10;top: $px$;&#10;bottom: $px$;&#10;$END$" description="CSS: position:" toReformat="false" toShortenFQNames="true">
+    <variable name="positon" expression="" defaultValue="absolute" alwaysStopAt="true" />
+    <variable name="px" expression="" defaultValue="0px" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="tablet" value="@media (max-width: @tabletWidth) {&#10;&#9;$END$&#10;}" description="sets up a responsive tablet thing" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="underscore" value="_ = require('underscore')$END$" description="inject underscore" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+  <template name="AjaxWebAPIDataService" value="AjaxWebAPIDataService = require('cs!AjaxWebAPIDataService')$END$" description="Require the AjaxWebAPIDataService" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CoffeeScript" value="true" />
+    </context>
+  </template>
+</templateSet>

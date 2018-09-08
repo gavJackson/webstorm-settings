@@ -1,0 +1,30 @@
+<application>
+  <component name="org.jetbrains.tfsIntegration.core.configuration.TFSConfigurationManager">
+    <option name="config">
+      <map>
+        <server uri="http://DK-SQL:8080/tfs/">
+          <configuration>
+            <credentials>
+              <credentials>
+                <domain>digitalkeystone</domain>
+                <password>dfe2dfcfdfc6dfc3dfdfdfc7df9adf98</password>
+                <username>gavin.jackson</username>
+              </credentials>
+            </credentials>
+          </configuration>
+        </server>
+        <server uri="https://dk-code.digitalkeystone.co.uk/tfs/DK/">
+          <configuration>
+            <credentials>
+              <credentials>
+                <domain>DIGITALKEYSTONE</domain>
+                <password>dfe2dfcfdfc6dfc3dfdfdfc7df9adf98</password>
+                <username>Gavin.Jackson</username>
+              </credentials>
+            </credentials>
+          </configuration>
+        </server>
+      </map>
+    </option>
+  </component>
+</application>
