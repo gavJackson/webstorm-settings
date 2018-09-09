@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <component name="GithubSettings">
-    <option name="LOGIN" value="gav_jackson@yahoo.com" />
-    <option name="AUTH_TYPE" value="BASIC" />
+  <component name="GithubAccounts">
+    <account id="fd1b1839-3d57-4aa5-bebf-5041bef5e937" name="gav_jackson@yahoo.com">
+      <server host="github.com" />
+    </account>
   </component>
 </application>
-
