@@ -1,0 +1,15 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.git;.hg;.svn;CVS;RCS;SCCS;__pycache__;_svn;rcs;" />
+    <extensionMap>
+      <mapping ext="cson" type="CoffeeScript" />
+      <mapping pattern="docTreeNode" type="HTML" />
+      <mapping ext="ttf" type="Native" />
+      <mapping pattern="accountSearchDataComponentResulttTemplate.json" type="PLAIN_TEXT" />
+      <mapping pattern="spike01.js" type="PLAIN_TEXT" />
+      <mapping ext="php" type="PLAIN_TEXT" />
+      <mapping ext="cshtml" type="XHTML" />
+      <mapping ext="config" type="XML" />
+    </extensionMap>
+  </component>
+</application>
