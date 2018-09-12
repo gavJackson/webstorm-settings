@@ -5,7 +5,7 @@
     <option name="regularExpressions" value="true" />
     <option name="REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.json" />
+    <option name="FILE_MASK" value="*.less" />
     <mask>*.properties</mask>
     <mask>*.jsp</mask>
     <mask>*.xml</mask>
@@ -18,10 +18,10 @@
     <mask>*.js,*.vue</mask>
     <mask>*.md</mask>
     <mask>*.coffee</mask>
-    <mask>*.less</mask>
     <mask>*.html</mask>
     <mask>*.js</mask>
     <mask>*.js,*.vue, *.html</mask>
     <mask>*.json</mask>
+    <mask>*.less</mask>
   </component>
 </application>
