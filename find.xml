@@ -19,9 +19,9 @@
     <mask>*.js</mask>
     <mask>*.js,*.vue, *.html</mask>
     <mask>*.coffee</mask>
-    <mask>*.json</mask>
     <mask>*.md</mask>
     <mask>*.html</mask>
+    <mask>*.json</mask>
     <mask>*.less</mask>
   </component>
 </application>
