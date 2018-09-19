@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="LanguageInjectionConfiguration">
-    <option name="INSTRUMENTATION" value="ASSERT" />
-    <option name="LANGUAGE_ANNOTATION" value="org.intellij.lang.annotations.Language" />
-    <option name="PATTERN_ANNOTATION" value="org.intellij.lang.annotations.Pattern" />
-    <option name="SUBST_ANNOTATION" value="org.intellij.lang.annotations.Subst" />
-    <option name="RESOLVE_REFERENCES" value="true" />
+    <injection language="CSS" injector-id="xml">
+      <display-name>div/@style</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("style")).withParent(xmlTag().withLocalName(string().equalTo("div")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
     <injection language="JavaScript" injector-id="xml">
       <display-name>knockout databind</display-name>
       <prefix>window['dummyVar']={</prefix>
@@ -14,4 +12,3 @@
     </injection>
   </component>
 </application>
-
