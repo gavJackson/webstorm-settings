@@ -2,8 +2,10 @@
   <component name="FindSettings">
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
+    <option name="regularExpressions" value="true" />
+    <option name="REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.less" />
+    <option name="FILE_MASK" value="*.json" />
     <mask>*.properties</mask>
     <mask>*.jsp</mask>
     <mask>*.xml</mask>
@@ -18,9 +20,9 @@
     <mask>*.json,*.js</mask>
     <mask>*.md</mask>
     <mask>*.js,*.vue, *.html</mask>
-    <mask>*.json</mask>
     <mask>*.html</mask>
     <mask>*.coffee</mask>
     <mask>*.less</mask>
+    <mask>*.json</mask>
   </component>
 </application>
