@@ -3,7 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.less" />
+    <option name="FILE_MASK" value="*.json, *.js" />
     <mask>*.properties</mask>
     <mask>*.jsp</mask>
     <mask>*.xml</mask>
@@ -16,11 +16,12 @@
     <mask>*.js,*.vue</mask>
     <mask>*.js</mask>
     <mask>*.json,*.js</mask>
-    <mask>*.json</mask>
     <mask>*.js,*.vue, *.html</mask>
     <mask>*.md</mask>
     <mask>*.html</mask>
     <mask>*.coffee</mask>
     <mask>*.less</mask>
+    <mask>*.json</mask>
+    <mask>*.json, *.js</mask>
   </component>
 </application>
