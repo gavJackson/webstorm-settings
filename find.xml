@@ -5,7 +5,7 @@
     <option name="localRegularExpressions" value="true" />
     <option name="LOCAL_REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.less, *.coffee, *.json, *.html" />
+    <option name="FILE_MASK" value="*.md" />
     <mask>*.properties</mask>
     <mask>*.jsp</mask>
     <mask>*.xml</mask>
@@ -23,8 +23,8 @@
     <mask>*.json</mask>
     <mask>*.coffee</mask>
     <mask>*.html</mask>
-    <mask>*.md</mask>
     <mask>*.less</mask>
     <mask>*.less, *.coffee, *.json, *.html</mask>
+    <mask>*.md</mask>
   </component>
 </application>
