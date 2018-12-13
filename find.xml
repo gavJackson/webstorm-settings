@@ -5,7 +5,7 @@
     <option name="defaultScopeName" value="All Places" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.less" />
+    <option name="FILE_MASK" value="*.coffee" />
     <mask>*.properties</mask>
     <mask>*.jsp</mask>
     <mask>*.xml</mask>
@@ -24,7 +24,7 @@
     <mask>*.html</mask>
     <mask>*.json</mask>
     <mask>*.md</mask>
-    <mask>*.coffee</mask>
     <mask>*.less</mask>
+    <mask>*.coffee</mask>
   </component>
 </application>
