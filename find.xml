@@ -3,7 +3,7 @@
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.coffee" />
+    <option name="FILE_MASK" value="*.json" />
     <mask>*.properties</mask>
     <mask>*.jsp</mask>
     <mask>*.xml</mask>
@@ -20,9 +20,9 @@
     <mask>*.js</mask>
     <mask>*.less, *.coffee, *.json, *.html</mask>
     <mask>*.html</mask>
-    <mask>*.json</mask>
     <mask>*.md</mask>
     <mask>*.less</mask>
     <mask>*.coffee</mask>
+    <mask>*.json</mask>
   </component>
 </application>
