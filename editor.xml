@@ -1,0 +1,26 @@
+<application>
+  <component name="EditorSettings">
+    <option name="IS_WHITESPACES_SHOWN" value="true" />
+  </component>
+  <component name="TodoConfiguration">
+    <pattern pattern="\btodo\b.*" />
+    <pattern pattern="\bfixme\b.*" />
+    <pattern icon="important" pattern="\btodo GJ: unit test\b.*" />
+    <pattern useCustomColors="true" case-sensitive="true" pattern="\bko \b.*">
+      <option name="FOREGROUND" value="a78cb8" />
+      <option name="BACKGROUND" value="323d31" />
+      <option name="FONT_TYPE" value="2" />
+      <option name="ERROR_STRIPE_COLOR" value="a74c0" />
+      <option name="EFFECT_TYPE" value="5" />
+    </pattern>
+    <pattern useCustomColors="true" case-sensitive="true" pattern="/ko">
+      <option name="FOREGROUND" value="a78cb8" />
+      <option name="BACKGROUND" value="323d31" />
+      <option name="FONT_TYPE" value="2" />
+      <option name="ERROR_STRIPE_COLOR" value="a74c0" />
+    </pattern>
+    <filter name="Just the unit tests">
+      <pattern index="2" />
+    </filter>
+  </component>
+</application>
