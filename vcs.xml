@@ -6,8 +6,12 @@
           <option name="url" value="https://github.com/gavJackson/Cyrus-App.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/gregduncan/tzar.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="$USER_HOME$/Work/Digital Mojo" />
+    <option name="cloneParentDir" value="$USER_HOME$/Work/Digital Keystone/Code/APv2 Prototype" />
   </component>
 </application>
