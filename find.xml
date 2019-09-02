@@ -17,12 +17,12 @@
     <mask>*.json,*.js</mask>
     <mask>*.js,*.vue, *.html</mask>
     <mask>*.json, *.js</mask>
-    <mask>*.js</mask>
     <mask>*.less, *.coffee, *.json, *.html</mask>
     <mask>*.html</mask>
     <mask>*.coffee</mask>
     <mask>*.json</mask>
     <mask>*.less</mask>
+    <mask>*.js</mask>
     <mask>*.md</mask>
   </component>
 </application>
