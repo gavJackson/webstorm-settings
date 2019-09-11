@@ -20,9 +20,9 @@
     <mask>*.less, *.coffee, *.json, *.html</mask>
     <mask>*.html</mask>
     <mask>*.js</mask>
-    <mask>*.coffee</mask>
     <mask>*.json</mask>
     <mask>*.less</mask>
+    <mask>*.coffee</mask>
     <mask>*.md</mask>
   </component>
 </application>
