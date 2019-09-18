@@ -10,8 +10,16 @@
           <option name="url" value="https://github.com/gregduncan/tzar.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://dunstanthomas.visualstudio.com/Integro%20CX/_git/Integro%20CX%20FESync" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://dunstanthomas.visualstudio.com" />
+          <option name="userName" value="gjackson@dunstanthomasholdingsltd.onmicrosoft.com" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="$USER_HOME$/Work/Digital Keystone/Code/APv2 Prototype" />
+    <option name="cloneParentDir" value="$USER_HOME$/Work/Digital Keystone/Code" />
   </component>
 </application>
